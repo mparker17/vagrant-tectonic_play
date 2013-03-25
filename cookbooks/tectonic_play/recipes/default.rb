@@ -95,9 +95,9 @@ mysql_database_user d7site['dbusername'] do
     privileges [:all]
     action :create
 end
-mysql_database_user site['dbusername'] do
+mysql_database_user d7site['dbusername'] do
   connection root_database_connection
-  password site['dbpassword']
+  password d7site['dbpassword']
   action :grant
 end
 bash "Running drush-make for Drupal 7 site" do
