@@ -10,9 +10,9 @@ d7site = {
     'dbdatabase' => "#{project}",
     'drupalroot' => "/mnt/www/drupal7/sites/default",
     'makedir'    => "/tmp/drupal-tectonic_play/",
-    'makefile'   => "/tmp/drupal-tectonic_play/drupal-org.make",
+    'makefile'   => "/tmp/drupal-tectonic_play/build-tectonic_play.make",
     'repository' => "git@github.com:drupalfellows/tectonic_play.git",
-    'branch'     => "develop"
+    'branch'     => "master"
 }
 
 root_database_connection = {
@@ -31,6 +31,9 @@ end
 #
 # Prepare utilities.
 #
+package "unzip" do
+    action :install
+end
 package "libapache2-mod-php5" do
     action :install
 end
