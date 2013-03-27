@@ -7,7 +7,7 @@ A plain Vagrant setup script for the tectonic_play website.
 * A Linux or Macintosh host machine.
     * On Macintosh, you'll need to run the [OSX GCC Installer][osx-gcc-installer] or install [Xcode][xcode] itself.
 * [VirtualBox v4.2.x][virtualbox].
-* [Vagrant v1.0.6][vagrant].
+* [Vagrant v1.1.4][vagrant].
 
 [osx-gcc-installer]: https://github.com/kennethreitz/osx-gcc-installer
 [xcode]: https://developer.apple.com/technologies/mac/#xcode
@@ -24,17 +24,21 @@ A plain Vagrant setup script for the tectonic_play website.
 
         cd vagrant-tectonic_play
 
-3. Start Vagrant.
+3. Create the directory that Drupal will eventually go in.
+
+        mkdir ./data/html
+
+4. Start Vagrant.
 
         vagrant up
 
-4. On Linux and Windows, map `tectonicplay.dev` to the virtual machine in the host machine's `hosts` file.
+5. On Linux and Windows, map `tectonicplay.dev` to the virtual machine in the host machine's `hosts` file.
 
     Most of the time, the following line will work:
 
         127.0.0.1 tectonicplay.dev
 
-5. Access the virtual machine by going to `http://tectonicplay.dev:8080/` in a web browser.
+6. Access the virtual machine by going to `http://tectonicplay.dev:8080/` in a web browser.
 
 ## Notes ##
 
